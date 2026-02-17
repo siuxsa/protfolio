@@ -1,1 +1,702 @@
-<!DOCTYPE html>\n<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <meta name="description" content="A comprehensive portfolio showcasing my skills, projects, and experience in web development and design.">\n    <meta name="keywords" content="Portfolio, Web Development, Web Design, Projects, Skills">\n    <meta name="robots" content="index, follow">\n    <link rel="canonical" href="https://www.example.com/">\n    <meta property="og:title" content="My Portfolio">\n    <meta property="og:description" content="Explore my portfolio to see my web development projects and skills. Much more to come!">\n    <meta property="og:image" content="https://www.example.com/image.jpg">\n    <meta property="og:url" content="https://www.example.com/">\n    <meta property="og:type" content="website">\n    <script type="application/ld+json">\n    {\n      "@context": "https://schema.org",\n      "@type": "Person",\n      "name": "Your Name",\n      "url": "https://www.example.com/",\n      "sameAs": [\n        "https://www.facebook.com/yourprofile",\n        "https://www.twitter.com/yourprofile",\n        "https://www.linkedin.com/in/yourprofile"\n      ]\n    }\n    </script>\n    <title>My Portfolio</title>\n</head>\n<body>\n    <header>\n        <h1>Welcome to My Portfolio</h1>\n    </header>\n    <main>\n        <section>\n            <h2>About Me</h2>\n            <p>This is where I describe myself.</p>\n        </section>\n        <section>\n            <h2>My Projects</h2>\n            <ul>\n                <li>Project 1</li>\n                <li>Project 2</li>\n                <li>Project 3</li>\n            </ul>\n        </section>\n    </main>\n    <footer>\n        <p>&copy; 2026 Your Name</p>\n    </footer>\n</body>\n</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore cybersecurity writeups and technical articles on bug bounty, penetration testing, SQL injection, WAF bypass, authentication vulnerabilities, and web security exploits.">
+    <meta name="keywords" content="cybersecurity writeups, bug bounty guides, penetration testing articles, SQL injection, WAF bypass, web security, API security tutorials">
+    <meta name="author" content="MD SHORIF AHAMMED">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <link rel="canonical" href="https://yourportfolio.com/writeups.html">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Open Graph / Social Media Tags -->
+    <meta property="og:title" content="Cybersecurity Writeups & Technical Articles">
+    <meta property="og:description" content="In-depth writeups on bug bounty hunting, web security exploits, penetration testing, and vulnerability research.">
+    <meta property="og:image" content="https://yourportfolio.com/Image/og-writeups.jpg">
+    <meta property="og:url" content="https://yourportfolio.com/writeups.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SIUXSA Portfolio">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cybersecurity Writeups & Technical Articles">
+    <meta name="twitter:description" content="Explore technical articles on bug bounty hunting, web security, and penetration testing.">
+    <meta name="twitter:image" content="https://yourportfolio.com/Image/og-writeups.jpg">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Cybersecurity Writeups",
+      "description": "Technical writeups and articles on cybersecurity, bug bounty hunting, and penetration testing",
+      "url": "https://yourportfolio.com/writeups.html",
+      "creator": {
+        "@type": "Person",
+        "name": "MD SHORIF AHAMMED",
+        "url": "https://yourportfolio.com"
+      }
+    }
+    </script>
+    
+    <title>Writeups - SIUXSA | Cybersecurity Technical Articles & Bug Bounty Guides</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="Assets/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #0a0a0a;
+            color: #fff;
+            min-height: 100vh;
+            font-family: 'Inter', 'Arial', sans-serif;
+        }
+        
+        .writeup-page-container {
+            max-width: 1400px;
+            margin: 1rem auto;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+        
+        .writeup-header {
+            text-align: center;
+            margin-top: 6rem;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+        
+        .writeup-header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            letter-spacing: 1.5px;
+        }
+        
+        .writeup-header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, #00ff88, #00ccff);
+            border-radius: 2px;
+        }
+        
+        .writeup-header p {
+            font-size: 1.2rem;
+            color: #ccc;
+            max-width: 600px;
+            margin: 1rem auto;
+            line-height: 1.6;
+        }
+        
+        .writeup-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .writeup-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0,255,136,0.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            cursor: pointer;
+            height: 100%;
+        }
+        
+        .writeup-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0,255,136,0.2);
+            border-color: rgba(0,255,136,0.4);
+        }
+        
+        .writeup-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0,255,136,0.1), rgba(0,255,136,0.05));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+        
+        .writeup-card:hover::before {
+            opacity: 1;
+        }
+        
+        .writeup-card::after {
+            content: 'Click to read writeup';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.8);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 3;
+            pointer-events: none;
+        }
+        
+        .writeup-card:hover::after {
+            opacity: 1;
+        }
+        
+        .writeup-thumbnail-wrapper {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            border-radius: 15px 15px 0 0;
+            overflow: hidden;
+        }
+        
+        .writeup-thumbnail {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+            transition: all 0.4s ease;
+        }
+        
+        .writeup-card:hover .writeup-thumbnail {
+            transform: scale(1.05);
+        }
+        
+        /* Fallback for missing thumbnails */
+        .writeup-thumbnail-wrapper::before {
+            content: '\f15c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            color: #00ff88;
+            opacity: 0.5;
+            z-index: 1;
+        }
+        
+        .writeup-info {
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.02);
+            display: flex;
+            flex-direction: column;
+            height: 220px;
+        }
+        
+        .writeup-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            min-height: 3em;
+        }
+        
+        .writeup-description {
+            font-size: 0.9rem;
+            color: #ccc;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            flex: 1;
+            min-height: 4.5em;
+            margin-bottom: 0.5rem;
+        }
+        
+        .writeup-stats {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            padding-top: 0.8rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            min-height: 2.5em;
+        }
+        
+        .writeup-stat {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #ccc;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+        
+        .writeup-stat i {
+            color: #00ff88;
+        }
+        
+        .load-more-section {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .load-more-btn {
+            background: linear-gradient(135deg, #00ff88, #00ccff);
+            color: #1a1a1a;
+            border: none;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,255,136,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .load-more-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .load-more-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(0,255,136,0.4);
+        }
+        
+        .load-more-btn:hover::before {
+            left: 100%;
+        }
+        
+        .load-more-btn i {
+            margin-right: 8px;
+        }
+        
+        /* Hide writeups beyond the first 9 by default */
+        .writeup-card:nth-child(n+10) {
+            display: none;
+        }
+        
+        /* Show all items when the grid has the 'show-all' class */
+        .writeup-grid.show-all .writeup-card {
+            display: block !important;
+        }
+        
+        /* FIX FOR MOBILE LINE CLAMPING */
+        @supports (-webkit-line-clamp: 3) {
+            .writeup-description {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+                overflow: hidden;
+            }
+        }
+        
+        @media (max-width: 1024px) {
+            .writeup-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .writeup-page-container {
+                padding: 1rem;
+            }
+            
+            .writeup-header h1 {
+                font-size: 2.5rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .writeup-header p {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+            
+            .writeup-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .writeup-info {
+                height: 200px; /* Adjusted for mobile */
+                padding: 1.25rem;
+            }
+            
+            .writeup-title {
+                font-size: 1.05rem;
+                line-height: 1.4;
+                min-height: 2.8em;
+                margin-bottom: 0.75rem;
+            }
+            
+            .writeup-description {
+                font-size: 0.95rem;
+                line-height: 1.5;
+                min-height: 4.5em;
+                margin-bottom: 0.75rem;
+                /* Mobile-specific fix for line clamping */
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            
+            .writeup-stats {
+                min-height: 2.2em;
+                padding-top: 0.75rem;
+            }
+            
+            .writeup-stat {
+                font-size: 0.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .writeup-header h1 {
+                font-size: 2rem;
+            }
+            
+            .writeup-header p {
+                font-size: 0.95rem;
+            }
+            
+            .writeup-info {
+                height: 190px;
+                padding: 1rem;
+            }
+            
+            .writeup-title {
+                font-size: 1rem;
+                min-height: 2.8em;
+                line-height: 1.35;
+            }
+            
+            .writeup-description {
+                font-size: 0.9rem;
+                line-height: 1.45;
+                min-height: 4.35em;
+                /* Ensure line clamping works on small mobile */
+                display: -webkit-box !important;
+                -webkit-line-clamp: 3 !important;
+                -webkit-box-orient: vertical !important;
+                overflow: hidden !important;
+            }
+            
+            .writeup-stat {
+                font-size: 0.75rem;
+            }
+            
+            .writeup-stat i {
+                font-size: 0.8rem;
+            }
+            
+            .load-more-btn {
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
+            }
+        }
+        
+        /* Extra small devices */
+        @media (max-width: 375px) {
+            .writeup-info {
+                height: 180px;
+            }
+            
+            .writeup-title {
+                font-size: 0.95rem;
+                min-height: 2.85em;
+            }
+            
+            .writeup-description {
+                font-size: 0.85rem;
+                line-height: 1.4;
+                min-height: 4.2em;
+            }
+            
+            .writeup-stats {
+                min-height: 2em;
+            }
+            
+            .writeup-stat {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Canvas -->
+    <canvas id="cyber-bg"></canvas>
+    <script src="Assets/background_script.js"></script>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html#home" class="nav-logo">
+                <!--<img src="Image/logo.png" alt="Logo" class="nav-logo-img">-->
+                <span>MD SHORIF AHAMMED</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="index.html#services" class="nav-link">Services</a></li>
+                <li><a href="writeups.html" class="nav-link active">Writeups</a></li>
+                <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+    
+    <main class="writeup-page-container">
+        <div class="writeup-header">
+            <h1>Writeup Gallery</h1>
+            <p>Explore my cybersecurity writeups and technical articles. Click on any writeup to read the full article.</p>
+        </div>
+        
+        <div class="writeup-grid">
+            <!-- Writeup 1 -->
+            <article class="writeup-card" onclick="window.open('https://infosecwriteups.com/uncovering-invisible-privileges-the-ultimate-guide-to-mass-assignment-in-registration-flows-9ecd5ff40512', '_blank')">
+                <div class="writeup-thumbnail-wrapper">
+                    <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*PrTW45TXX7abT1dO4xqNkw.png" 
+                         alt="Bug Bounty Writeup - Mass Assignment in Registration Flows" 
+                         class="writeup-thumbnail"
+                         onerror="this.style.display='none';">
+                </div>
+                <div class="writeup-info">
+                    <h2 class="writeup-title">Uncovering Invisible Privileges: The Ultimate Guide to Mass-Assignment in Registration Flows</h2>
+                    <div class="writeup-description">Mass-assignment weaknesses show up frequently in modern APIs, especially in signup endpoints that accept JSON. When the backend automatically maps request fields to internal models without filtering them, attackers can slip in additional parameters and gain privileges they shouldn't have. This guide walks through the most effective JSON payload variations you can use to test registration flows and uncover silent logic flaws.</div>
+                    <div class="writeup-stats">
+                        <div class="writeup-stat"><i class="fas fa-eye"></i> 1.4k reads</div>
+                        <div class="writeup-stat"><i class="fas fa-thumbs-up"></i> 461 likes</div>
+                        <div class="writeup-stat"><i class="fas fa-clock"></i> 7 min read</div>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Writeup 2 -->
+            <article class="writeup-card" onclick="window.open('https://infosecwriteups.com/a-practical-guide-to-authentication-and-session-management-vulnerabilities-517f5412a02a', '_blank')">
+                <div class="writeup-thumbnail-wrapper">
+                    <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*_oLBNKBNx8j9_VxyPshdzA.png" 
+                         alt="Web Security Writeup - Authentication and Session Management Vulnerabilities" 
+                         class="writeup-thumbnail"
+                         onerror="this.style.display='none';">
+                </div>
+                <div class="writeup-info">
+                    <h2 class="writeup-title">A Practical Guide to Authentication and Session Management Vulnerabilities</h2>
+                    <div class="writeup-description">Modern applications rely heavily on sessions, tokens and identity checks. When these controls aren't implemented correctly, attackers can bypass restrictions or take over accounts with little effort. In this guide, I'll walk you through a checklist of all session-related issues, how to test for them and what their impact can look like. It's a straightforward way to confirm whether an application's session handling is actually secure.</div>
+                    <div class="writeup-stats">
+                        <div class="writeup-stat"><i class="fas fa-eye"></i> 856 reads</div>
+                        <div class="writeup-stat"><i class="fas fa-thumbs-up"></i> 230 likes</div>
+                        <div class="writeup-stat"><i class="fas fa-clock"></i> 7 min read</div>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Writeup 3 -->
+            <article class="writeup-card" onclick="window.open('https://infosecwriteups.com/mastering-sql-injection-recon-step-by-step-guide-for-bug-bounty-hunters-9f493fb058dd', '_blank')">
+                <div class="writeup-thumbnail-wrapper">
+                    <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*c3Y1Fyyz053b77beVwPQ3w.png" 
+                         alt="SQL Injection Writeup - Bug Bounty Reconnaissance Guide" 
+                         class="writeup-thumbnail"
+                         onerror="this.style.display='none';">
+                </div>
+                <div class="writeup-info">
+                    <h2 class="writeup-title">Mastering SQL Injection Recon: Step-by-Step Guide for Bug Bounty Hunters</h2>
+                    <div class="writeup-description">SQL Injection remains one of the most critical web vulnerabilities, allowing attackers to manipulate backend databases through unsanitized inputs. Effective reconnaissance is key to identifying potential SQLi points before exploitation. This article walks you through a practical, step-by-step SQLi reconnaissance methodology using popular tools and payloads.</div>
+                    <div class="writeup-stats">
+                        <div class="writeup-stat"><i class="fas fa-eye"></i> 2.5K reads</div>
+                        <div class="writeup-stat"><i class="fas fa-thumbs-up"></i> 571 likes</div>
+                        <div class="writeup-stat"><i class="fas fa-clock"></i> 7 min read</div>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Writeup 4 -->
+            <article class="writeup-card" onclick="window.open('https://infosecwriteups.com/waf-bypass-masterclass-using-sqlmap-with-proxychains-and-tamper-scripts-against-cloudflare-9d46b36bae94', '_blank')">
+                <div class="writeup-thumbnail-wrapper">
+                    <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*R1yLRvHPAT-ikersHSkKGQ.png" 
+                         alt="WAF Bypass Masterclass - SQLMap and Tamper Scripts" 
+                         class="writeup-thumbnail"
+                         onerror="this.style.display='none';">
+                </div>
+                <div class="writeup-info">
+                    <h2 class="writeup-title">The Ultimate Guide to WAF Bypass Using SQLMap, Proxychains & Tamper Scripts</h2>
+                    <div class="writeup-description">In today's rapidly evolving cybersecurity world Web Application Firewalls (WAFs) play a critical role in protecting websites from malicious inputs like SQL injections. But attackers and ethical hackers alike are always exploring new techniques to test and bypass such defenses. This comprehensive guide covers advanced WAF evasion techniques.</div>
+                    <div class="writeup-stats">
+                        <div class="writeup-stat"><i class="fas fa-eye"></i> 1.8K reads</div>
+                        <div class="writeup-stat"><i class="fas fa-thumbs-up"></i> 356 likes</div>
+                        <div class="writeup-stat"><i class="fas fa-clock"></i> 10 min read</div>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Writeup 5 -->
+            <article class="writeup-card" onclick="window.open('https://medium.com/@MuhammedAsfan/from-simple-file-upload-to-full-server-control-even-if-you-didnt-get-rce-yet-afd9debd3c6b', '_blank')">
+                <div class="writeup-thumbnail-wrapper">
+                    <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*FZFKd5_2_XqWBkR4XWTr5w.jpeg" 
+                         alt="File Upload Vulnerability to Remote Code Execution" 
+                         class="writeup-thumbnail"
+                         onerror="this.style.display='none';">
+                </div>
+                <div class="writeup-info">
+                    <h2 class="writeup-title">From Simple File Upload to Full Server Control (Even If You Didn't Get RCE Yet)</h2>
+                    <div class="writeup-description">Most beginners think the file upload feature is "just for images…." In reality, it's one of the most dangerous places in a web app. If the server doesn't handle uploads correctly, a simple "Change Profile Picture" can turn into remote code execution (RCE): you upload code, the server runs it. Learn exploitation techniques and mitigation strategies.</div>
+                    <div class="writeup-stats">
+                        <div class="writeup-stat"><i class="fas fa-eye"></i> 872 reads</div>
+                        <div class="writeup-stat"><i class="fas fa-thumbs-up"></i> 156 likes</div>
+                        <div class="writeup-stat"><i class="fas fa-clock"></i> 5 min read</div>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Writeup 6 -->
+            <article class="writeup-card" onclick="window.open('https://systemweakness.com/how-to-find-race-conditions-in-web-applications-from-beginner-to-pro-4e59d51c6e47', '_blank')">
+                <div class="writeup-thumbnail-wrapper">
+                    <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*GMGgQK-85ufljbzdvLRFFQ.png" 
+                         alt="Race Conditions in Web Applications" 
+                         class="writeup-thumbnail"
+                         onerror="this.style.display='none';">
+                </div>
+                <div class="writeup-info">
+                    <h2 class="writeup-title">How to find Race Conditions in Web Applications — From Beginner to Pro</h2>
+                    <div class="writeup-description">Race Conditions are some of the coolest bugs you can find in a Web Application. It occurs when the time of checking a constraint and the time of executing an action form a window large enough for an attacker to exploit. This guide covers detection, exploitation, and real-world examples of race condition vulnerabilities.</div>
+                    <div class="writeup-stats">
+                        <div class="writeup-stat"><i class="fas fa-eye"></i> 376 reads</div>
+                        <div class="writeup-stat"><i class="fas fa-thumbs-up"></i> 189 likes</div>
+                        <div class="writeup-stat"><i class="fas fa-clock"></i> 5 min read</div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        
+        <div class="load-more-section">
+            <button class="load-more-btn" id="load-more-btn">
+                <i class="fas fa-plus"></i> See More Writeups
+            </button>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loadMoreBtn = document.getElementById('load-more-btn');
+            const writeupGrid = document.querySelector('.writeup-grid');
+
+            if (loadMoreBtn) {
+                const writeupCards = writeupGrid.querySelectorAll('.writeup-card');
+
+                if (writeupCards.length <= 9) {
+                    loadMoreBtn.style.display = 'none';
+                }
+
+                loadMoreBtn.addEventListener('click', () => {
+                    writeupGrid.classList.add('show-all');
+                    loadMoreBtn.parentElement.style.display = 'none';
+                });
+            }
+
+            // Hamburger menu toggle for mobile navigation
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.addEventListener('click', function() {
+                        hamburger.classList.remove('active');
+                        navMenu.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <a href="index.html#home" class="footer-logo-link">
+                            //<img src="Image/logo.png" alt="Logo" class="footer-logo-img">//
+                            <span>Md Shorif Ahammed</span>
+                        </a>
+                    </div>
+                    <p>Professional cybersecurity services to protect your digital assets and strengthen your security posture.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#services">VAPT</a></li>
+                        <li><a href="index.html#services">Web Testing</a></li>
+                        <li><a href="index.html#services">Network Testing</a></li>
+                        <li><a href="index.html#services">Cloud Testing</a></li>
+                        <li><a href="index.html#services">CMS Audits</a></li>
+                        <li><a href="index.html#services">OSINT & Digital Reconnaissance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:sa.unofficial.net@gmail.com">Email</a></li>
+                        <li><a href="https://linkedin.com/in/siuxsa" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://github.com/siuxsa" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://medium.com/@siuxsa" target="_blank" rel="noopener noreferrer">Medium</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Siuxsa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Assets/script.js"></script>
+</body>
+</html>
